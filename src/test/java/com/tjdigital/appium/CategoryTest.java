@@ -29,6 +29,7 @@ public class CategoryTest extends BaseTest {
         driver.findElement(By.xpath(".//*[contains(@resource-id,'et_aac_red_minute')]")).sendKeys("3");
         driver.findElement(By.xpath(".//*[contains(@resource-id,'btn_aac_save')]")).click();
 
+        // wait
         (new WebDriverWait(driver, 5)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
                 WebElement element = driver.findElement(By.xpath(".//*[@class='android.widget.TextView'][@text='1/2/3']"));
